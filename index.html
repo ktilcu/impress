@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href='http://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+
+    <link href="css/main.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body class="impress-not-supported">
+
+    <!--
+        For example this fallback message is only visible when there is `impress-not-supported` class on body.
+    -->
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+    <div id="impress">
+        <div class="step" id="start" data-x="0" data-y="1000"><span class="the">The</span><span class='a10'>10</span><span class='oncall'>E OnCallmandments</span><span class="tagline sans">How to work with EOC Projects</span></div>
+        <div class="step" data-x="1000" data-y="2000" data-rotate="90">this is step 2</div>
+        <div class="step" data-x="1000" data-y="3000" data-scale="3">this is step 3</div>
+        <div class="step" data-x="1000" data-y="4000">this is step 4</div>
+        <div class="step" data-x="1000" data-y="5000">this is step 5</div>
+        <div class="step" data-x="1000" data-y="6000">this is step 6</div>
+        <div class="step" data-x="2000" data-y="2000">this is step 7</div>
+        <div class="step" data-x="3000" data-y="2000">this is step 8</div>
+        <div class="step" data-x="4000" data-y="2000">this is step 9</div>
+        <div class="step" data-x="5000" data-y="2000">this is step 10</div>
+
+    </div>
+    <div class="hint">
+        <p>Use a spacebar or arrow keys to navigate</p>
+    </div>
+    <script>
+    if ("ontouchstart" in document.documentElement) { 
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+    }
+    </script>
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+</body>
+</html>
